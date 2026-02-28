@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: linear-gradient(120deg, #2d223a 0%, #3a2c4d 60%, #1e2337 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-image:
+        url('resources/bglog.png'),
+        linear-gradient(120deg, #2d223a 0%, #3a2c4d 60%, #1e2337 100%);
+    background-size: 400px, cover;
+    background-repeat: repeat, no-repeat;
+    background-blend-mode: lighten;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Login Container */
+.login-container {
+    background: linear-gradient(120deg, #3a2c4d 60%, #2d223a 100%);
+    padding: 50px 40px;
+    border-radius: 28px;
+    box-shadow: 0 8px 32px #00000044, 0 0 0 6px #ffe6b733;
+    width: 420px;
+    text-align: center;
+    border: 3px solid #ffe6b7;
+    animation: login-card-pop 1.2s both;
+    position: relative;
+}
+
+@keyframes login-card-pop {
+    0% { transform: scale(0.7) translateY(60px); opacity: 0;}
+    60% { transform: scale(1.08) translateY(-8px);}
+    100% { transform: scale(1) translateY(0); opacity: 1;}
+}
+
+/* Logo */
+.logo {
+    width: 120px;
+    margin-bottom: -18px;
+    margin-top: -18px;
+    filter: drop-shadow(0 0 8px #ffe6b7);
+}
+
+/* Headings */
+h2 {
+    font-size: 2rem;
+    color: #ffe6b7;
+    font-family: 'Dancing Script', cursive, serif;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 8px #6e37b2;
+    letter-spacing: 1px;
+}
+.subtitle {
+    font-size: 1rem;
+    color: #fbe1d5;
+    margin-bottom: 30px;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+label {
+    font-size: 1rem;
+    text-align: left;
+    color: #ffe6b7;
+}
+input {
+    padding: 15px;
+    font-size: 1rem;
+    border: 1.5px solid #ffe6b7;
+    border-radius: 10px;
+    outline: none;
+    width: 94%;
+    background: #fff;
+    box-shadow: 0 2px 8px #b96e5a11;
+    transition: border 0.2s;
+}
+input:focus {
+    border-color: #b96e5a;
+    box-shadow: 0 0 5px #b96e5a55;
+}
+
+/* Button */
+.btn {
+    padding: 15px;
+    font-size: 1.2rem;
+    background: linear-gradient(90deg, #ffe6b7 60%, #b96e5a 100%);
+    color: #6e37b2;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 8px #b96e5a22;
+    margin-top: 10px;
+    transition: background 0.2s, transform 0.2s, color 0.2s;
+    text-decoration: none;
+}
+.btn:hover {
+    background: linear-gradient(90deg, #b96e5a 60%, #ffe6b7 100%);
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* Register link */
+.register-link {
+    font-size: 0.9rem;
+    color: #fbe1d5;
+    margin-top: 20px;
+}
+.register-link a {
+    color: #ffe6b7;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+.register-link a:hover {
+    text-decoration: underline;
+    color: #b96e5a;
+}
+
+/* Back button */
+.back-btn {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    margin: 0;
+    padding: 8px 18px;
+    background: #fbe1d5;
+    color: #b96e5a;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.08rem;
+    box-shadow: 0 2px 8px #b96e5a11;
+    transition: background 0.2s, color 0.2s;
+    z-index: 10;
+}
+.back-btn:hover {
+    background: #b96e5a;
+    color: #fff;
+}
+
+/* Animations (from top10.css) */
+@keyframes pop-in {
+    0% { transform: scale(0.7) translateY(40px); opacity: 0;}
+    80% { transform: scale(1.1) translateY(-10px);}
+    100% { transform: scale(1) translateY(0); opacity: 1;}
+}

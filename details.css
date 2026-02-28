@@ -1,0 +1,440 @@
+/* === Navbar Styling (match Top 10) === */
+.navbar {
+    display: flex;
+    align-items: center;
+    background: #2d223a;
+    padding: 0 32px;
+    height: 56px;
+    color: #ffe6b7;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 24px #1e2337aa;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+}
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+.navbar-logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+}
+.navbar-title {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 1;
+    font-family: 'Playfair Display', serif;
+    color: #ffe6b7;
+}
+.brand-main { font-weight: bold; }
+.brand-sub  { font-size: 13px; margin-top: -2px; }
+.navbar-links {
+    display: flex;
+    gap: 25px;
+    margin-left: auto;
+}
+.navbar-links a {
+    color: #ffe6b7;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 4px 0;
+    transition: border-color 0.2s;
+    border-bottom: 2px solid transparent;
+}
+.navbar-links a:hover {
+    border-bottom: 2px solid #f5d97e;
+}
+.navbar-search {
+    margin-left: 32px;
+    padding: 8px 16px;
+    border-radius: 14px;
+    border: 1.5px solid #ffe6b7;
+    font-size: 1rem;
+    background: #fff;
+    color: #6e37b2;
+    outline: none;
+    transition: border 0.2s;
+}
+.navbar-search:focus {
+    border: 1.5px solid #b96e5a;
+}
+
+/* === Background & Body (match Top 10) === */
+body {
+    background: linear-gradient(120deg, #2d223a 0%, #3a2c4d 60%, #1e2337 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-image:
+        url('resources/bgproject.png'),
+        linear-gradient(120deg, #2d223a 0%, #3a2c4d 60%, #1e2337 100%);
+    background-size: 400px, cover;
+    background-repeat: repeat, no-repeat;
+    background-blend-mode: lighten;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #ffe6b7;
+}
+
+/* === Dessert Detail Main Layout === */
+.dessert-detail-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: none;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 40px;
+    padding-top: 250px;
+}
+.dessert-detail-bg-half {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48vw;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    opacity: 0.13;
+}
+.dessert-detail-bg-img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    filter: blur(2px) grayscale(0.2);
+}
+.dessert-detail-img-circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid #ffe6b7;
+    box-shadow: 0 12px 40px #b96e5a44, 0 0 0 18px #ffe6b733;
+    background: #fff;
+    position: absolute;
+    top: -190px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: block;
+}
+.recipe-cards {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+.recipe-card {
+    background: #2d223a;
+    border-radius: 18px;
+    border: 2px solid #ffe6b7;
+    box-shadow: 0 4px 24px #b96e5a22;
+    padding: 18px 24px;
+    min-width: 220px;
+    max-width: 320px;
+    color: #ffe6b7;
+    margin-bottom: 10px;
+}
+.recipe-card h4 {
+    color: #ffe6b7;
+    margin-bottom: 8px;
+    font-family: 'Dancing Script', cursive, serif;
+    font-size: 1.2rem;
+}
+.info-highlight {
+    display: flex;
+    align-items: center;
+    background: #ffe6b722;
+    border-radius: 12px;
+    padding: 8px 16px;
+    margin: 10px 0;
+    font-size: 1.05rem;
+    color: #ffe6b7;
+    gap: 10px;
+}
+.info-icon {
+    font-size: 1.4rem;
+}
+
+/* === Dessert Detail Container === */
+.dessert-detail-container {
+    background: linear-gradient(120deg, #3a2c4d 60%, #2d223a 100%);
+    border-radius: 38px;
+    box-shadow: 0 8px 32px #00000044, 0 0 0 8px #ffe6b733;
+    padding: 80px 64px 64px 64px;
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 0;
+    position: relative;
+    z-index: 3;
+    border: 3px solid #ffe6b7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: card-fade-in 1.2s both;
+    padding-top: 140px;
+}
+
+/* === Dessert Title, Desc, Divider === */
+.dessert-detail-title {
+    font-family: 'Dancing Script', cursive, serif;
+    font-size: 3rem;
+    color: #ffe6b7;
+    margin-bottom: 10px;
+    text-shadow: 0 4px 24px #6e37b2;
+    letter-spacing: 2px;
+    animation: pop-in 1.2s;
+}
+.dessert-detail-desc {
+    color: #fbe1d5;
+    font-size: 1.25rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin-bottom: 18px;
+    text-align: center;
+    max-width: 600px;
+    animation: fade-in 1.6s 0.3s both;
+}
+.dessert-detail-divider {
+    border: none;
+    border-top: 2px solid #ffe6b7;
+    width: 80px;
+    margin: 24px auto 24px auto;
+    opacity: 0.7;
+}
+
+/* === Dessert Info Group === */
+.dessert-detail-info-group {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    width: 100%;
+}
+
+/* === Dessert Info Section === */
+.dessert-detail-info h2 {
+    font-family: 'Dancing Script', cursive, serif;
+    color: #ffe6b7;
+    font-size: 2rem;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 8px #6e37b2;
+}
+.dessert-detail-info h4 {
+    color: #ffe6b7;
+    font-size: 1.15rem;
+    margin-bottom: 4px;
+    margin-top: 18px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    text-shadow: 0 2px 8px #6e37b222;
+}
+.dessert-detail-info p {
+    color: #fbe1d5;
+    font-size: 1.08rem;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* === Recipe Section === */
+.dessert-detail-recipe h2 {
+    font-family: 'Dancing Script', cursive, serif;
+    color: #ffe6b7;
+    font-size: 2rem;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 8px #6e37b2;
+}
+.dessert-detail-recipe ul,
+.dessert-detail-recipe ol {
+    color: #fbe1d5;
+    font-size: 1.08rem;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin-left: 24px;
+}
+.dessert-detail-recipe ul {
+    margin-bottom: 16px;
+    list-style: disc inside;
+}
+.dessert-detail-recipe ol {
+    list-style: decimal inside;
+    margin-bottom: 0;
+}
+.dessert-detail-recipe li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+/* === Video Section === */
+.dessert-detail-video h2 {
+    font-family: 'Dancing Script', cursive, serif;
+    color: #ffe6b7;
+    font-size: 2rem;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 8px #6e37b2;
+}
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 18px 0 0 0;
+}
+.video-container iframe {
+    border-radius: 18px;
+    box-shadow: 0 4px 24px #b96e5a55;
+    border: 3px solid #ffe6b7;
+    background: #fff;
+}
+
+/* === Animations (from Top 10) === */
+@keyframes pop-in {
+    0% { transform: scale(0.7) translateY(40px); opacity: 0;}
+    80% { transform: scale(1.1) translateY(-10px);}
+    100% { transform: scale(1) translateY(0); opacity: 1;}
+}
+@keyframes fade-in {
+    0% { opacity: 0; transform: translateY(30px);}
+    100% { opacity: 1; transform: translateY(0);}
+}
+@keyframes card-fade-in {
+    0% { opacity: 0; transform: translateY(40px) scale(0.97);}
+    100% { opacity: 1; transform: translateY(0) scale(1);}
+}
+
+/* === Confetti & Sparkle (optional, for festive look) === */
+.sparkle {
+    width: 38px;
+    vertical-align: middle;
+    animation: sparkle-rotate 2.5s linear infinite;
+    filter: drop-shadow(0 0 8px #ffe6b7);
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    z-index: 30;
+}
+.confetti {
+    position: absolute;
+    pointer-events: none;
+    z-index: 25;
+    opacity: 0.7;
+    filter: brightness(1.2) drop-shadow(0 0 8px #ffe6b7);
+}
+.confetti1 { top: 10px; left: 80px; width: 32px; animation: confetti-fall 2.5s infinite linear;}
+.confetti2 { top: 80px; right: 40px; width: 22px; animation: confetti-fall 2.2s 0.7s infinite linear;}
+.confetti3 { bottom: 18px; left: 60px; width: 26px; animation: confetti-fall 2.8s 1.2s infinite linear;}
+@keyframes sparkle-rotate {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+@keyframes confetti-fall {
+    0% { opacity: 0; transform: translateY(-30px) rotate(0deg);}
+    20% { opacity: 1;}
+    100% { opacity: 0; transform: translateY(60px) rotate(120deg);}
+}
+
+/* === Responsive Design === */
+@media (max-width: 1100px) {
+    .dessert-detail-container {
+        padding: 30px 10px 28px 10px;
+        max-width: 98vw;
+    }
+    .dessert-detail-img-circle {
+        width: 160px;
+        height: 160px;
+        margin-top: 40px;
+        margin-bottom: -80px;
+    }
+}
+@media (max-width: 700px) {
+    .dessert-detail-container {
+        padding: 18px 2vw 18px 2vw;
+    }
+    .dessert-detail-title {
+        font-size: 2rem;
+    }
+    .dessert-detail-img-circle {
+        width: 110px;
+        height: 110px;
+        margin-top: 24px;
+        margin-bottom: -48px;
+    }
+    .video-container iframe {
+        width: 95vw;
+        height: 220px;
+    }
+}
+
+/* === Footer (match Top 10) === */
+.footer {
+    background: #2d223a;
+    color: #ffe6b7;
+    padding: 40px 20px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    box-shadow: 0 -4px 24px #1e2337aa;
+}
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-about,
+.footer-links,
+.footer-contact {
+    flex: 1 1 300px;
+}
+.footer-about h3,
+.footer-links h3,
+.footer-contact h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ffe6b7;
+}
+.footer-about p,
+.footer-contact p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+.footer-links ul li a {
+    color: #ffe6b7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-links ul li a:hover {
+    color: #fbe1d5;
+}
+.footer-contact .social-media {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+.social-icon img:hover {
+    transform: scale(1.2);
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #ddd;
+}
